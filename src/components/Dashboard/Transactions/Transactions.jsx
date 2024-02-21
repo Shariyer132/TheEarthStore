@@ -52,15 +52,165 @@ const Transactions = () => {
                                             </div>
                                         </div>
                                     </div>
-                                </td> 
+                                </td>
                                 <td className="whitespace-nowrap">Couples</td>
                                 <td className="whitespace-nowrap">200</td>
                                 <td className="whitespace-nowrap">10</td>
                                 <td className="whitespace-nowrap">people</td>
                                 <td className="whitespace-nowrap">delivered</td>
-                                <td className="whitespace-nowrap"><MdRemoveRedEye className="cursor-pointer" onClick={()=>navigate('/dashboard/buyedProduct')}/></td>
+                                <td className="whitespace-nowrap"><MdRemoveRedEye className="cursor-pointer" onClick={() => navigate('/dashboard/buyedProduct')} /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {/* mobile device view */}
+            <div className="md:hidden shadow-lg m-2 p-3 rounded-md">
+                <h2 className="py-4 pl-2 text-lg font-bold">Product Dashboard</h2>
+                <div className="overflow-x-auto">
+                    <table className="pt-5 border-t-2 border-black w-full">
+                        <tbody >
+                            {/* card one */}
+                            <tr>
+                                <th className="border-r-2 border-gray-500">Image</th>
+                                <td className="pl-4">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
+                                            <img src="https://images.pexels.com/photos/5065220/pexels-photo-5065220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Name</th>
+                                <td className="pl-4">
+                                    Couple
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Amount</th>
+                                <td className="pl-4">
+                                    200
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Discount</th>
+                                <td className="pl-4">
+                                    2
+                                </td>
+                            </tr>
+                            <tr className="border-y-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Quantity</th>
+                                <td className="pl-4">
+                                    4
+                                </td>
+                            </tr>
+                            <tr className="border-y-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Status</th>
+                                <td className="pl-4">
+                                    delivered
+                                </td>
+                            </tr>
+                            <tr className="border-b-4 border-black">
+                                <th className="border-r-2 border-gray-500">Actions</th>
+                                <td className="pl-4">
+                                    <MdRemoveRedEye className="cursor-pointer" onClick={() => navigate('/dashboard/buyedProduct')} />
+                                </td>
                             </tr>
 
+                        </tbody>
+                        <tbody>
+                            {/* card one */}
+                            <tr>
+                                <th className="border-r-2 border-gray-500">Image</th>
+                                <td className="pl-4">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
+                                            <img src="https://images.pexels.com/photos/5065220/pexels-photo-5065220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Name</th>
+                                <td className="pl-4">
+                                    Couple
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Price</th>
+                                <td className="pl-4">
+                                    200
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Stock</th>
+                                <td className="pl-4">
+                                    2
+                                </td>
+                            </tr>
+                            <tr className="border-y-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Category</th>
+                                <td className="pl-4">
+                                    People
+                                </td>
+                            </tr>
+                            <tr className="border-b-4 border-black">
+                                <th className="border-r-2 border-gray-500">Actions</th>
+                                <td className="pl-4">
+                                    <MdRemoveRedEye className="cursor-pointer" onClick={() => navigate('/dashboard/productDetails')} />
+                                </td>
+                            </tr>
+
+                        </tbody>
+                        <tbody>
+                            {/* card one */}
+                            <tr>
+                                <th className="border-r-2 border-gray-500">Image</th>
+                                <td className="pl-4">
+                                    <div className="avatar">
+                                        <div className="mask mask-squircle w-12 h-12">
+                                            <img src="https://images.pexels.com/photos/5065220/pexels-photo-5065220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Avatar Tailwind CSS Component" />
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Name</th>
+                                <td className="pl-4">
+                                    Couple
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Amount</th>
+                                <td className="pl-4">
+                                    200
+                                </td>
+                            </tr>
+                            <tr className="border-t-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Discount</th>
+                                <td className="pl-4">
+                                    2
+                                </td>
+                            </tr>
+                            <tr className="border-y-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Quantity</th>
+                                <td className="pl-4">
+                                    People
+                                </td>
+                            </tr>
+                            <tr className="border-y-2 border-gray-500">
+                                <th className="border-r-2 border-gray-500">Status</th>
+                                <td className="pl-4">
+                                    delivered
+                                </td>
+                            </tr>
+                            <tr className="border-b-2 border-black">
+                                <th className="border-r-2 border-gray-500">Actions</th>
+                                <td className="pl-4">
+                                    <MdRemoveRedEye />
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

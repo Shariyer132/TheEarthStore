@@ -6,6 +6,9 @@ import Dashboard from "../layouts/Dashboard";
 import ProductDashboard from "../components/Dashboard/ProductDashboard/ProductDashboard";
 import Transactions from "../components/Dashboard/Transactions/Transactions";
 import BuyedProducts from "../components/Dashboard/Transactions/BuyedProducts";
+import ProductDetails from "../components/Dashboard/ProductDashboard/ProductDetails";
+import CreateProduct from "../components/Dashboard/CreateProduct/CreateProduct";
+import AdminHome from "../components/Dashboard/AdminHome/AdminHome";
 
 export const router = createBrowserRouter([
     {
@@ -20,24 +23,33 @@ export const router = createBrowserRouter([
         ],
     },
     {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard/>,
         errorElement: <Errorpage/>,
         children: [
             {
-                path: '/dashboard/productDashboard',
+                path: 'adminHome',
+                element: <AdminHome/>
+            },
+            {
+                path: 'productDashboard',
                 element: <ProductDashboard/>
             },
             {
-                path: '/dashboard/transactions',
+                path: 'transactions',
                 element: <Transactions/>
             },
             {
-                path: '/dashboard/buyedProduct',
+                path: 'buyedProduct',
                 element:<BuyedProducts/>
             },
             {
-                path: '/dashboard/productDetails'
+                path: 'productDetails',
+                element: <ProductDetails/>
+            },
+            {
+                path: 'createProduct',
+                element: <CreateProduct/>
             }
         ],
     },
