@@ -103,8 +103,8 @@ const AdminHome = () => {
                 </div>
 
             </div>
-             {/* large device view */}
-             <div className="flex lg:flex-row flex-col items-center  lg:justify-around pt-20">
+            {/* large device view */}
+            <div className="flex lg:flex-row flex-col items-center  lg:justify-around pt-20">
                 <div className="hidden md:block">
                     <BarChart
                         width={500}
@@ -127,7 +127,7 @@ const AdminHome = () => {
                         </Bar>
                         <Legend />
                     </BarChart>
-                       
+
                 </div>
                 <div className="pl-10 hidden md:block">
                     <PieChart width={280} height={400}>
@@ -140,7 +140,7 @@ const AdminHome = () => {
                             outerRadius={140}
                             fill="#8884d8"
                             dataKey="price"
-                            
+
                         >
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
@@ -174,7 +174,7 @@ const AdminHome = () => {
                         </Bar>
                         <Legend />
                     </BarChart>
-                       
+
                 </div>
                 <div>
                     <PieChart width={295} height={300}>
@@ -187,7 +187,7 @@ const AdminHome = () => {
                             outerRadius={100}
                             fill="#8884d8"
                             dataKey="price"
-                            
+
                         >
                             {data.map((entry, index) => (
                                 <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />

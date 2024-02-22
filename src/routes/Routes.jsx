@@ -9,6 +9,9 @@ import BuyedProducts from "../components/Dashboard/Transactions/BuyedProducts";
 import ProductDetails from "../components/Dashboard/ProductDashboard/ProductDetails";
 import CreateProduct from "../components/Dashboard/CreateProduct/CreateProduct";
 import AdminHome from "../components/Dashboard/AdminHome/AdminHome";
+import Orderpage from "../components/Home/Order/Orderpage";
+import ShopNow from "../components/Home/Shop/ShopNow";
+import ShopingCart from "../components/Home/ShopingCart/ShopingCart";
 
 export const router = createBrowserRouter([
     {
@@ -20,6 +23,18 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Home/>
             },
+            {
+                path: '/orders',
+                element: <Orderpage/>
+            },
+            {
+                path: '/shop',
+                element: <ShopNow/>
+            },
+            {
+                path: '/shopingCart',
+                element: <ShopingCart/>
+            }
         ],
     },
     {

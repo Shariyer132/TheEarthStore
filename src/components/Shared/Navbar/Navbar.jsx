@@ -1,18 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
 import { useState } from "react";
-import { RxCross1 } from "react-icons/rx";
+import Header from "./Header";
+import Drawer from "./Drawer";
+import { FaShoppingBag } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
+
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
-    const toggleNavbar = () => {
-        setIsOpen(!isOpen);
-    }
+    const Links = <>
+        <li><NavLink to='/shop'  className="text-white"><FaShoppingBag /></NavLink></li>
+        <li><NavLink to='/shopingCart' className="text-white"><FaShoppingCart /></NavLink></li>
+    </>
 
     const links = <>
-        <li><Link to='/dashboard/adminHome' className="">DASHBOARD</Link></li>
-        <li><Link className=" btn-sm flex items-center">Logout<IoIosLogOut /></Link></li>
+        <li><NavLink to='/orders'>ORDERS</NavLink></li>
+        <li><NavLink to='/dashboard/adminHome'>DASHBOARD</NavLink></li>
+        <li><NavLink className="flex items-center">Logout<IoIosLogOut /></NavLink></li>
     </>
 
     return (
@@ -20,24 +26,21 @@ const Navbar = () => {
             <div className="navbar-start">
                 <Link to="/" className="btn btn-ghost text-white text-xl">HOME</Link>
             </div>
-            <div className="navbar-end flex flex-col items-end">
-                <button tabIndex={0} onClick={toggleNavbar} className="btn no-animation btn-ghost hover:bg-transparent w-14 md:hidden">
-                    {
-                        isOpen ?
-                            <RxCross1 className="text-xl" />
-                            : <svg xmlns="http://www.w3.org/2000/svg" className="w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                    }
-                </button>
-                {isOpen && (
-                    <div className="absolute top-12 w-36 rounded-md md:hidden">
-                        <ul className="flex flex-col basis-full w-44 z-[1] menu p-2 shadow bg-base-100 rounded-box">
-                            {links}
-                        </ul>
-                    </div>
-                )}
-            </div>
+            {/* moblie view */}
+            <main className="md:hidden">
+                <Header setIsOpen={setIsOpen} />
+                <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
+                    <ul onClick={()=>(setIsOpen(false))} className="menu">
+                        {Links}
+                        {links}
+                    </ul>
+                </Drawer>
+            </main>
+
+            {/* large device view */}
             <div className="navbar-end hidden md:flex">
                 <ul className="menu menu-horizontal px-1">
+                    {Links}
                     <li>
                         <details>
                             <summary className="text-white">CATEGORIES</summary>
@@ -53,3 +56,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+
+
