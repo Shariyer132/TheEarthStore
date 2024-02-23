@@ -6,7 +6,7 @@ const Orderpage = () => {
             <h4 className="font-semibold bg-gray-300 mt-3 py-2 pl-2 mx-3">Manage All Products</h4>
             {/* large device showing table */}
             <div className="hidden md:block shadow-lg mt-1 px-6 lg:mx-36 rounded-lg">
-                <h2 className="py-4 text-lg font-bold">Product Dashboard</h2>
+                <h2 className="py-4 text-lg font-bold">Orders Summary</h2>
                 <div className="overflow-x-auto">
                     <table className="table">
                         {/* head */}

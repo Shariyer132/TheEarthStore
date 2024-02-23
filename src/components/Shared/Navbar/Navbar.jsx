@@ -11,8 +11,8 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
     const Links = <>
-        <li><NavLink to='/shop'  className="text-white"><FaShoppingBag /></NavLink></li>
-        <li><NavLink to='/shopingCart' className="text-white"><FaShoppingCart /></NavLink></li>
+        <li className="indicator"><Link to='/shop'  className="text-white"><FaShoppingBag /></Link></li>
+        <li><Link to='/shopingCart' className="text-white"><FaShoppingCart /></Link></li>
     </>
 
     const links = <>

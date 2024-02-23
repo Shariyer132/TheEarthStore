@@ -12,6 +12,8 @@ import AdminHome from "../components/Dashboard/AdminHome/AdminHome";
 import Orderpage from "../components/Home/Order/Orderpage";
 import ShopNow from "../components/Home/Shop/ShopNow";
 import ShopingCart from "../components/Home/ShopingCart/ShopingCart";
+import ManageUsers from "../components/Dashboard/ManageUsers/ManageUsers";
+import SingleUser from "../components/Dashboard/ManageUsers/SingleUser";
 
 export const router = createBrowserRouter([
     {
@@ -65,6 +67,14 @@ export const router = createBrowserRouter([
             {
                 path: 'createProduct',
                 element: <CreateProduct/>
+            },
+            {
+                path: 'manageUsers',
+                element: <ManageUsers/>
+            },
+            {
+                path: 'user',
+                element: <SingleUser/>
             }
         ],
     },
