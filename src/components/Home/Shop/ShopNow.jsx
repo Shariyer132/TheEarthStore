@@ -98,7 +98,7 @@ const ShopNow = () => {
 
                 </div>
                 {/* Pagination */}
-                <div className="join p-6">
+                <div className="join flex justify-center p-6">
                     <button className="join-item btn">«</button>
                     <button className="join-item btn">Page 22</button>
                     <button className="join-item btn">»</button>

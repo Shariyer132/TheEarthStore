@@ -5,8 +5,8 @@ const ProductDetails = () => {
             <h4 className="font-semibold bg-gray-300 mt-3 py-2 pl-2 mr-2">Product Details</h4>
             <div className="flex flex-col lg:flex-row gap-2 pt-10 justify-center items-center">
                 {/* card */}
-                <div className="lg:w-1/2">
-                    <div className="card md:w-96 bg-base-100 shadow">
+                <div className="lg:w-1/2 mb-10">
+                    <div className="card md:w-96 mx-auto bg-base-100 shadow">
                         <figure className="px-10 pt-10">
                             <img src="https://images.pexels.com/photos/5065220/pexels-photo-5065220.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Shoes" className="rounded-xl" />
                         </figure>
@@ -21,7 +21,7 @@ const ProductDetails = () => {
                     </div>
                 </div>
                 {/* form */}
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2 mb-10">
                     <div className="card shrink-0 w-full max-w-md bg-[#F3F3F3]">
                         <form className="card-body">
                         <h3 className="text-center font-semibold text-lg">Manage Product</h3>
